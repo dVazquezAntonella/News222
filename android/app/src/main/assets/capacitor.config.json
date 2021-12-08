@@ -1,0 +1,8 @@
+{
+	"appId": "io.ionic.new222",
+	"appName": "new222",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "build",
+	"cordova": {}
+}

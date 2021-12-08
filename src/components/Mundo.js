@@ -13,7 +13,7 @@ class MutationRecord extends Component {
         }
 
         getArticles = () =>{
-            axios.get("https://newsapi.org/v2/everything?q=World&from=2021-11-25&sortBy=popularity&apiKey=APIKEY")
+            axios.get("https://newsapi.org/v2/everything?q=World&from=2021-11-25&sortBy=popularity&apiKey=30716f8b69d8476bacf070470dde661c")
                 .then(res => {
                     this.setState({
                         articles: res.data.articles,
@@ -23,7 +23,7 @@ class MutationRecord extends Component {
                 });
             console.log("kiuvo");
         }
-  
+
 
     render() {
 
@@ -31,16 +31,16 @@ class MutationRecord extends Component {
 
                 var listArticles = this.state.articles.map((article) => {
                     return (
-                        
+
                         <div className="articulo">
                         <a href={article.url}> <img src={article.urlToImage} alt=""/>    </a>
                         <h2>{article.title}</h2>
                         <p>{article.description}</p>
-                        
-                        
+
+
                         </div>
-                        
-                        
+
+
                     );
                 });
 
@@ -50,31 +50,31 @@ class MutationRecord extends Component {
                     <div className="cabeza"><p>Mundiales</p></div>
                     <div className="contenedor">
                        {listArticles}
-    
-    
-    
-    
+
+
+
+
                 </div>
                 </div >
-    
+
             );
         }else{
             return (
                 <div>
                     <div className="cabeza"><p>Mundiales</p></div>
                     <div className="contenedor">
-    
+
                        <h1>Un Momento</h1>
-    
-    
-    
-    
+
+
+
+
                 </div>
                 </div >
-    
+
             );
         }
-        
+
     }
 
 

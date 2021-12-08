@@ -13,7 +13,7 @@ class Noticias extends Component {
         }
 
         getArticles = () =>{
-            axios.get("https://newsapi.org/v2/top-headlines?country=mx&apiKey=APIKEY")
+            axios.get("https://newsapi.org/v2/top-headlines?country=mx&apiKey=30716f8b69d8476bacf070470dde661c")
                 .then(res => {
                     this.setState({
                         articles: res.data.articles,
@@ -23,7 +23,7 @@ class Noticias extends Component {
                 });
             console.log("kiuvo");
         }
-  
+
 
     render() {
 
@@ -31,16 +31,16 @@ class Noticias extends Component {
 
                 var listArticles = this.state.articles.map((article) => {
                     return (
-                        
+
                         <div className="articulo">
                         <a href={article.url}> <img src={article.urlToImage} alt=""/>    </a>
                         <h2>{article.title}</h2>
                         <p>{article.description}</p>
-                        
-                        
+
+
                         </div>
-                        
-                        
+
+
                     );
                 });
 
@@ -50,31 +50,31 @@ class Noticias extends Component {
                     <div className="cabeza"><p>Noticias</p></div>
                     <div className="contenedor">
                        {listArticles}
-    
-    
-    
-    
+
+
+
+
                 </div>
                 </div >
-    
+
             );
         }else{
             return (
                 <div>
                     <div className="cabeza"><p>Noticias</p></div>
                     <div className="contenedor">
-    
+
                        <h1>Un Momento</h1>
-    
-    
-    
-    
+
+
+
+
                 </div>
                 </div >
-    
+
             );
         }
-        
+
     }
 
 
